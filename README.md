@@ -15,7 +15,7 @@
 
 **Multiplier Schematic:**
 <br>
-![image](https://github.com/user-attachments/assets/e9cedbfd-2ccf-4be9-9c0e-f3dfd6f583a7)
+![image](https://github.com/user-attachments/assets/b64028a8-f875-4ddb-a9af-f5702b26bf18)
 <br>
 
 **Adder Row Schematic:**
