@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/89295640-0fba-4c76-8402-6ffc86d63d5d)# Parallel Multiplier
+# Parallel Multiplier
 <br>
 
 **Author:** Soham Kapur
