@@ -7,7 +7,7 @@
 **Description:** Implementation of a generalized Parallel Multiplier using Carry Save Adder with SystemVerilog and Xilinx Vivado. 
 <br>
 
-**Tools Used:** Verilog HDL, Xilinx Vivado
+**Tools Used:** SystemVerilog HDL, Xilinx Vivado
 <br>
 
 **Concepts used:** Parameterization, Parallel Multiplier, Carry Save Adder
