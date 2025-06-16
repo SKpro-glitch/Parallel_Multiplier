@@ -4,13 +4,13 @@
 **Author:** Soham Kapur
 <br>
 
-**Description:** Implementation of a generalized Parallel Multiplier using Carry Save Adder with SystemVerilog and Xilinx Vivado. 
+**Description:** Implementation of a generalized Parallel Multiplier using Carry Save Adder with SystemVerilog and Xilinx Vivado. Includes UVM-based testbench.
 <br>
 
-**Tools Used:** SystemVerilog HDL, Xilinx Vivado
+**Tools Used:** SystemVerilog, Xilinx Vivado
 <br>
 
-**Concepts used:** Parameterization, Parallel Multiplier, Carry Save Adder
+**Concepts used:** Parameterization, UVM, Parallel Multiplier, Carry Save Adder
 <br>
 
 **Multiplier Schematic:** 4x4 multiplier
