@@ -158,7 +158,7 @@ class monitor extends uvm_monitor;
       
       //Since no other control signal exists in the DUT, clock is taken as the Control signal
       if (vif.clk) begin
-        //Item is instantiated inside the 'forever' block, so an additional 'if' block is needed
+        //Item is instantiated inside the 'forever' block along with an '@' condition, so an additional 'if' block is needed
         mult_item item = mult_item::type_id::create("item");
         
         //First part of transaction - supplying the input
