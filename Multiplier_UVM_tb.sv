@@ -92,10 +92,13 @@ class driver extends uvm_driver #(mult_item);
   //Run phase of the Driver
   virtual task run_phase(uvm_phase phase);
     super.run_phase(phase);
+
+    //Infinite loop to provide inputs continuously  
     forever begin
+      //Instantiate the item
       mult_item m_item;
+	    
       `uvm_info("DRV", $sformatf("Wait for item from sequencer"), UVM_LOW)
-      
       //Acts as semaphore and blocks fetching of next item once item is received
       seq_item_port.get_next_item(m_item);
 
