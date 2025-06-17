@@ -10,7 +10,7 @@
 **Tools Used:** SystemVerilog, Xilinx Vivado
 <br>
 
-**Concepts used:** Parameterization, UVM, Parallel Multiplier, Carry Save Adder
+**Concepts used:** Parameterization, Universal Verification Mehtodology (UVM), Parallel Multiplier, Carry Save Adder
 <br>
 
 **Multiplier Schematic:** 4x4 multiplier
