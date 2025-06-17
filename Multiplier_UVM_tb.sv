@@ -45,6 +45,35 @@ class sequencer extends uvm_sequencer#(mult_item);
         `uvm_info("SQR", $sformatf("Sequencer Build phase done"), UVM_LOW)
   endfunction
 endclass
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//The main sequence that forms the stimulus and randomizer aspect of the testbench
+class gen_item_seq extends uvm_sequence;
+  `uvm_object_utils(gen_item_seq)
+  function new(string name="gen_item_seq");
+    super.new(name);
+  endfunction
+
+  //Number of test cases to generate
+  int num = 3;
+  
+  //Uncomment the following 2 lines to randomize the number of tests
+  //rand int num;
+  //constraint c1 { num inside {[5:10]}; }
+
+  virtual task body();
+    for (int i = 0; i < num; i++) begin
+    	mult_item m_item = mult_item::type_id::create("m_item");
+    	start_item(m_item); 
+    	m_item.randomize(); //After this, the Driver will 'get' the item and this function will wait
+    	`uvm_info("SEQ", $sformatf("Generate new item: "), UVM_LOW)
+    	m_item.print();
+      	finish_item(m_item); //This will run only after the Driver is 'done' with the item
+    end
+    `uvm_info("SEQ", $sformatf("Done generation of %0d items", num), UVM_LOW)
+  endtask
+endclass
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Interface allows verification components to access DUT signals using a virtual interface handle
 //IF = InterFace; mult_if = Multiplier Interface
@@ -271,34 +300,6 @@ class env extends uvm_env;
     a0.m0.mon_analysis_port.connect(sb0.m_analysis_imp);
     `uvm_info("ENV", $sformatf("Environment Connect phase done"), UVM_LOW)
   endfunction
-endclass
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//The main sequence that forms the stimulus and randomizer aspect of the testbench
-class gen_item_seq extends uvm_sequence;
-  `uvm_object_utils(gen_item_seq)
-  function new(string name="gen_item_seq");
-    super.new(name);
-  endfunction
-
-  //Number of test cases to generate
-  int num = 3;
-  
-  //Uncomment the following 2 lines to randomize the number of tests
-  //rand int num;
-  //constraint c1 { num inside {[5:10]}; }
-
-  virtual task body();
-    for (int i = 0; i < num; i++) begin
-    	mult_item m_item = mult_item::type_id::create("m_item");
-    	start_item(m_item); 
-    	m_item.randomize(); //After this, the Driver will 'get' the item and this function will wait
-    	`uvm_info("SEQ", $sformatf("Generate new item: "), UVM_LOW)
-    	m_item.print();
-      	finish_item(m_item); //This will run only after the Driver is 'done' with the item
-    end
-    `uvm_info("SEQ", $sformatf("Done generation of %0d items", num), UVM_LOW)
-  endtask
 endclass
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
