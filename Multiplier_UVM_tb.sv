@@ -82,7 +82,8 @@ class driver extends uvm_driver #(mult_item);
   //Build phase instantiates the components that exist inside a component 
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    if (!uvm_config_db#(virtual mult_if)::get(this, "", "mult_vif", vif)) //Instantiating the interface
+    //Verifying that the interface is instantiated successfully
+    if (!uvm_config_db#(virtual mult_if)::get(this, "", "mult_vif", vif))
       `uvm_fatal("DRV", "Could not get vif")
     else
       `uvm_info("DRV", $sformatf("Driver Build phase done"), UVM_LOW)
