@@ -10,20 +10,20 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
-parameter size = 16;
-//The Size parameter is set for the size of the multiplier and multiplicand.
-//For example, in order to makean 8x8 multiplier, set size as 8.
-
-//The bits and prod parameters are used to fix the sizes of other registers and loops.
-//Bits is for the input values and prod is for the output (product).
-parameter bits = size-1, prod = 2*bits+1;
-
 //Parallel Multiplier
-module Multiplier(clk, a, b, p, v);
-    input clk; //System clock
-    input [bits:0] a, b; //Multiplier and multiplicand
-    output reg [prod:0] p, v; //Output Product and Verification product
+module Multiplier #(parameter size = 16) 
+    //The Size parameter is set for the size of the multiplier and multiplicand.
+    //For example, in order to makean 8x8 multiplier, set size as 8.
+    (
+    input clk, //System clock
+    input [bits:0] a, b, //Multiplier and multiplicand
+    
+    output reg [prod:0] p, v //Output Product and Verification product
+    );
+    
+    //The bits and prod parameters are used to fix the sizes of other registers and loops.
+    parameter bits = size-1, prod = 2*bits+1;
+    //Bits is for the input values and prod is for the output (product).
     
     wire [bits:0] c [bits:0]; //Stores the intermediate carry values of the carry save adder
     wire [bits-1:0] s [bits:0]; //Stores the intermediate sum values of the carry save adder
