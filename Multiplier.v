@@ -5,9 +5,6 @@
 // Create Date: 12.12.2024 10:04:25
 // Module Name: Multiplier
 // Project Name: Parallel Multiplier using Carry Save Adder
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
 //////////////////////////////////////////////////////////////////////////////////
 
 //Parallel Multiplier
