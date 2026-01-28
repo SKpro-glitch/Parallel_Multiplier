@@ -33,11 +33,11 @@ This IP is a fully combinational, high-speed Wallace Tree Multiplier. Unlike sta
 
 The design implements a three-stage reduction:
 
-* Partial Product Generation: AND-gate matrix.
+* **Partial Product Generation:** AND-gate matrix.
 
-* Wallace Reduction Tree: Multiple levels of Full Adders (3:2 compressors) and Half Adders (2:2 compressors) to reduce partial products to two rows.
+* **Wallace Reduction Tree:** Multiple levels of Full Adders (3:2 compressors) and Half Adders (2:2 compressors) to reduce partial products to two rows.
 
-* Final Addition: A high-speed Carry-Lookahead Adder (CLA) or Vector-Merge Adder to produce the final product.
+* **Final Addition:** A high-speed Carry-Lookahead Adder (CLA) or Vector-Merge Adder to produce the final product.
 
 ## 5. View Port Descriptions
 
