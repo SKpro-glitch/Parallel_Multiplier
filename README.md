@@ -41,11 +41,11 @@ The design implements a three-stage reduction:
 
 ## 5. View Port Descriptions
 
-| Port Name |	Direction |	Width |	Description |
-|   :---   |   :---:   |   ---:   |
-| a |	Input |	[N-1:0] |	Multiplicand |
-| b	| Input |	[N-1:0]	| Multiplier |
-| p |	Output |	[2N-1:0]	| Final Product (A×B) |
+|   Port Name   |   Direction   |   Width   |   Description   |
+|   :---:   |   :---:   |   :---:   |   :--- |
+|   a   |   Input   |   [N-1:0]   |   Multiplicand   |
+|   b   |   Input   |	[N-1:0]   |   Multiplier   |
+|   p   |	Output   |	[2N-1:0]   |   Final Product (A×B)   |
 
 ## 6. Usage Example (Instantiation)
 
