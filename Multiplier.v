@@ -14,7 +14,7 @@
 // limitations under the License.
 //
 // Project Name: N-bit Wallace Tree Multiplier
-// Description:  This module creates a parallel multiplier using the Wallace Tree concept. The input size is set as per the paramter N.
+// Description:  This module creates a parallel multiplier using the Wallace Tree concept. The input size is set as per the paramter N (N >= 3).
 // -----------------------------------------------------------------------------
 
 `timescale 1ns / 1ps
