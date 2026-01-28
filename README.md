@@ -21,3 +21,7 @@
 **Adder Row Schematic:** Individual instance of Intermediate Product module
 <br>
 ![image](https://github.com/user-attachments/assets/71dfe993-168c-44d8-8bf0-0bca8460cf78)
+
+**License:**
+
+This project is licensed under the Apache License 2.0. It is free for both personal and commercial use. See the [Apache 2.0 License](LICENSE) file for details.
