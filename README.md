@@ -20,11 +20,12 @@ This IP is a fully combinational, high-speed Wallace Tree Multiplier. Unlike sta
 
 **3. Technical Specifications (Data Sheet)**
 
-    | Parameter |	8x8 Bit |	16x16 Bit |	32x32 Bit |
-    | Logic Cells (LUTs) |	~110 |	~480 |	~2100 |
-    | Critical Path (ns) |	2.1 ns |	4.8 ns |	7.2 ns |
-    | Max Freq (Target) |	450 MHz |	200 MHz | 130 MHz  |
-    | Latency	| 0 Cycles | 0 Cycles | 0 Cycles |
+    |   Parameter |   8x8 Bit   |   16x16 Bit   |   32x32 Bit   |
+    |   :---   |   :---:   |   ---:   |
+    |   Logic Cells (LUTs)   |	~110   |   ~480   |   ~2100   |
+    |   Critical Path (ns)   |	2.1 ns   |   4.8 ns   |   7.2 ns   |
+    |   Max Freq (Target)   |   450 MHz   |   200 MHz |   130 MHz   |
+    |   Latency   | 0 Cycles   |   0 Cycles   |   0 Cycles   |
 
     **Note:** Performance data based on Xilinx Artix-7 (-2 speed grade) synthesis. ASIC gate counts available upon request.
 
