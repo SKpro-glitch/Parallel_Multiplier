@@ -1,0 +1,12 @@
+# Vivado/XSIM Junk
+xsim.dir/
+*.log
+*.jou
+*.pb
+*.wdb
+*.vdi
+*.str
+.Xil/
+
+# Makefile artifacts
+tb_params.svh

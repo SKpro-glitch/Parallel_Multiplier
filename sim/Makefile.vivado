@@ -1,0 +1,79 @@
+# -----------------------------------------------------------------------------
+# Copyright 2024 Soham Kapur
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http:#www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# Project Name: N-bit Wallace Tree Multiplier
+# Description: Makefile for Xilinx Vivado.
+# -----------------------------------------------------------------------------
+
+# --- Vivado Configuration ---
+# Bit width for the multiplier (can be overridden: make run N=16)
+N ?= 32
+TEST  ?= test
+
+# Path Setup
+RTL_DIR = ../rtl
+TB_DIR  = .
+
+# Source Files
+RTL_SRC = $(RTL_DIR)/Multiplier_Wrapper.sv \
+		  $(RTL_DIR)/Multiplier.sv \
+		  $(RTL_DIR)/Inter_Prod.sv
+		  
+TB_SRC  = $(TB_DIR)/interface.sv \
+          $(TB_DIR)/multiplier_uvm_pkg.sv \
+          $(TB_DIR)/tb_top.sv
+
+# Simulation Tool Commands for Linux
+XVLOG   = xvlog -sv -L uvm -d "TB_WIDTH=$(N)"
+XELAB   = xelab -relax -s top_sim -L uvm -timescale 1ns/1ps
+XSIM    = xsim top_sim -testplusarg "UVM_TESTNAME=$(TEST)" -runall
+
+# Simulation Tool Commands for Windows
+#XVLOG   = xvlog.bat -sv -L uvm -d "TB_WIDTH=$(N)"
+#XELAB   = xelab.bat -relax -s top_sim -L uvm -timescale 1ns/1ps
+#XSIM    = xsim.bat top_sim -testplusarg "UVM_TESTNAME=$(TEST)" -runall
+
+# --- Targets ---
+
+all: clean compile elaborate run
+
+# 1. Compile RTL and SystemVerilog files
+compile:
+	$(XVLOG) $(RTL_SRC)
+	$(XVLOG) $(TB_SRC)
+
+# 2. Elaborate the design (Snapshot generation)
+elaborate:
+	$(XELAB) work.Parallel_Multiplier_tb
+
+# 3. Run the simulation in batch mode
+run:
+	$(XSIM)
+
+# 4. Open Waveform Viewer (GUI mode)
+gui: compile elaborate
+	xsim top_sim -gui
+
+# 5. Cleanup temporary files
+#Linux
+clean:
+	rm -rf xsim.dir/ .Xil/
+	rm -f *.log *.jou *.pb *.wdb
+#Windows
+#clean:
+#	if exist xsim.dir rmdir /s /q xsim.dir
+#	if exist *.log del /q *.log
+#	if exist *.jou del /q *.jou
+#	if exist *.pb del /q *.pb
