@@ -6,7 +6,7 @@
 
 This IP is a high-speed Parallel Multiplier. This module utilizes a Carry Save Adder for fast computation of partial prducts, making it ideal for high-frequency DSP applications, Cryptography, and ALU design.
 
-## 1. Key Features
+## 2. Key Features
 
 * **Linear Delay:** Path delay of an Array multiplier is proportional to O(N), where N is the bit width.
 
@@ -18,7 +18,7 @@ This IP is a high-speed Parallel Multiplier. This module utilizes a Carry Save A
 
 * **Verification:** Includes a self-checking testbench with random stimulus (constrained-random).
 
-## 1. Project Structure
+## 3. Project Structure
 
 **Root Directory**
 
@@ -56,7 +56,7 @@ This IP is a high-speed Parallel Multiplier. This module utilizes a Carry Save A
 
 * `timing.xdc`: Timing constraints.
 
-## 1. Technical Specifications (Data Sheet)
+## 4. Technical Specifications (Data Sheet)
 
 |  Width |  Logic Cells (LUTs)   |  Critical Path (ns)   |  Max Freq (MHz) |
 |  :---: |  :---: |  :---: |  :---: |
@@ -69,7 +69,7 @@ Latency without Wrapper = 0 cycles (Fully Combinational)
 
 **Note:** Performance data based on *Xilinx Zynq-7000 xc7z012sclg485-2* synthesis.
 
-## 1. Architecture Detail
+## 5. Architecture Detail
 
 The design implements the following reductions:
 
@@ -77,7 +77,7 @@ The design implements the following reductions:
 
 * **Intermediate Product:** Each stage of the Carry Save Adder produces an Intermediate Product.
 
-## 1. View Port Descriptions
+## 6. View Port Descriptions
 
 |   Port Name   |   Direction   |   Width   |   Description   |
 |   :---:   |   :---:   |   :---:   |   :--- |
@@ -85,7 +85,7 @@ The design implements the following reductions:
 |   b   |   Input   |	[N-1:0]   |   Multiplier   |
 |   p   |	Output   |	[2N-1:0]   |   Final Product (A×B)   |
 
-## 1. Quick Start
+## 7. Quick Start
 
 **Simulate on Linux CLI (Vivado):**
 ```bash
@@ -110,7 +110,7 @@ vivado -mode batch -source syn_vivado.tcl -tclargs 32 20.0
 
 *Note:* Simulation and Synthesis scripts are provided only for AMD Vivado. For Intel Quartus or other platforms, the RTL is standard SystemVerilog and can be imported directly into any standard flow.
 
-## 1. Usage Example (Instantiation)
+## 8. Usage Example (Instantiation)
 
 **With Wrapper:**
 ```bash
@@ -132,10 +132,22 @@ vivado -mode batch -source syn_vivado.tcl -tclargs 32 20.0
    );
 ```
 
-## 1. License
+## 9. Sample Schematic
+
+**Multiplier Schematic:** 4x4 multiplier
+<br>
+![image](https://github.com/user-attachments/assets/b64028a8-f875-4ddb-a9af-f5702b26bf18)
+<br>
+
+**Adder Row Schematic:** Individual instance of Intermediate Product module
+<br>
+![image](https://github.com/user-attachments/assets/71dfe993-168c-44d8-8bf0-0bca8460cf78)
+
+
+## 10. License
 
 Licensed under the Apache License, Version 2.0. You may use this IP in both open-source and commercial projects. See the [Apache 2.0 License](LICENSE) file for details.
 
-## 1. Contact
+## 11. Contact
 
-Email: sohamkapur134@gmail.com
+**Email:** sohamkapur134@gmail.com
