@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Project Name: N-bit Wallace Tree Multiplier
+// Project Name: Parameterized Parallel Multiplier
 // Description:  This module creates a parallel multiplier using the Wallace Tree concept. The input size is set as per the paramter N (N >= 3).
 // -----------------------------------------------------------------------------
 

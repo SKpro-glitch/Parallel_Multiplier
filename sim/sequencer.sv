@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Project Name: N-bit Wallace Tree Multiplier
+// Project Name: Parameterized Parallel Multiplier
 // Description:  The sequencer is a mediator who establishes a connection between sequence and driver.
 // -----------------------------------------------------------------------------
 

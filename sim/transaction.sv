@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Project Name: N-bit Wallace Tree Multiplier
+// Project Name: Parameterized Parallel Multiplier
 // Description:  This is the base transaction object that will be used in the environment to initiate new transactions and capture transactions at DUT interface.
 // -----------------------------------------------------------------------------
 

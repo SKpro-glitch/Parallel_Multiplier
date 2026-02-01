@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Project Name: N-bit Wallace Tree Multiplier
+// Project Name: Parameterized Parallel Multiplier
 // Description: This is the package that owns all the testbench classes, to make all the files accessible to each other.
 // -----------------------------------------------------------------------------
 

@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Project Name: N-bit Wallace Tree Multiplier
+// Project Name: Parameterized Parallel Multiplier
 // Description:  This module creates a combinational intermediate product for the Wallace Tree multiplier, which is one stage of the Carry Save Adder.
 // -----------------------------------------------------------------------------
 

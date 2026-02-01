@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Project Name: N-bit Wallace Tree Multiplier
+// Project Name: Parameterized Parallel Multiplier
 // Description: Instantiates an environment, sets up virtual interface handles for sub components and starts a top level sequence.
 // -----------------------------------------------------------------------------
 

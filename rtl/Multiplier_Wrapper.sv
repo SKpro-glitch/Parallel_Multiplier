@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Project Name: N-bit Wallace Tree Multiplier
+// Project Name: Parameterized Parallel Multiplier
 // Description:  This module is a wrapper for the combinational multiplier. It includes registers, clock and reset signals so that the timing analysis of the combinational module can be done.
 // -----------------------------------------------------------------------------
 
