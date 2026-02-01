@@ -65,6 +65,7 @@ This IP is a high-speed Parallel Multiplier. This module utilizes a Carry Save A
 |  32x32 |  ~1920 |  18.489   |  54.086   |
 
 Latency with Wrapper = 1 cycle
+<br>
 Latency without Wrapper = 0 cycles (Fully Combinational)
 
 **Note:** Performance data based on *Xilinx Zynq-7000 xc7z012sclg485-2* synthesis.
