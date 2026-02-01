@@ -139,7 +139,7 @@ vivado -mode batch -source syn_vivado.tcl -tclargs 32 20.0
 ![image](https://github.com/user-attachments/assets/b64028a8-f875-4ddb-a9af-f5702b26bf18)
 <br>
 
-**Adder Row Schematic:** Individual instance of Intermediate Product module
+**Adder Row Schematic:** Individual instance of Intermediate Product module for 4-bit width
 <br>
 ![image](https://github.com/user-attachments/assets/71dfe993-168c-44d8-8bf0-0bca8460cf78)
 
