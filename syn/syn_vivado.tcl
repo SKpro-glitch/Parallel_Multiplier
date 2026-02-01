@@ -64,8 +64,11 @@ route_design
 
 # Step 5: Generate Professional Reports
 # These files provide the data for your main README benchmarks
+file delete -force reports/utilization_width_${N}.txt
 report_utilization -file reports/utilization_width_${N}.txt
+file delete -force reports/timing_width_${N}.txt
 report_timing_summary -file reports/timing_width_${N}.txt
+file delete -force reports/power_width_${N}.txt
 report_power -file reports/power_width_${N}.txt
 
 # Step 6: Finalize
