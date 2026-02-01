@@ -60,13 +60,13 @@ This IP is a high-speed Parallel Multiplier. This module utilizes a Carry Save A
 
 |  Width |  Logic Cells (LUTs)   |  Critical Path (ns)   |  Max Freq (MHz) |
 |  :---: |  :---: |  :---: |  :---: |
-|  8x8   |  ~70   |  5.362 |  186.498  |
-|  16x16 |  ~360  |  10.865   |  92.039   |
-|  32x32 |  ~1920 |  18.489   |  54.086   |
+|  8x8   |  ~70   |  5.362 ns   |  186.498 MHz   |
+|  16x16 |  ~360  |  10.865 ns   |  92.039 MHz   |
+|  32x32 |  ~1920 |  18.489 ns   |  54.086 MHz   |
 
-Latency with Wrapper = 1 cycle
+* Latency with Wrapper = 1 cycle
 <br>
-Latency without Wrapper = 0 cycles (Fully Combinational)
+* Latency without Wrapper = 0 cycles (Fully Combinational)
 
 **Note:** Performance data based on *Xilinx Zynq-7000 xc7z012sclg485-2* synthesis.
 
